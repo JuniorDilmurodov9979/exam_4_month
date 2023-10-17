@@ -1,0 +1,177 @@
+input {
+    outline-color: #6c727f;
+}
+
+.register {
+    // display: none;
+}
+.register__title-wrapper {
+    max-width: 566px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 43px;
+    text-align: center;
+}
+.register__title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 135.294%;
+    color: #170f49;
+}
+.register__desc,.item__desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 166.667% ;
+    color: #6f6c90;
+}
+.register__form {
+}
+.register__list {
+    display: flex;
+    justify-content: center;
+    @include list-unstyled;
+}
+.register__item {
+    max-width: 689px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+.item {
+    // display: none;
+    margin: 0 auto;
+    padding-bottom: 0;
+}
+.item__wrapper {
+    // max-width: 689px;
+    width: 100%;
+    margin-bottom: 32px;
+    padding: 33px 55px 80px 46px;
+    border-radius: 34px;
+    background-color: #fff;
+    border: 1px solid #eff0f6;
+    box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+    
+}
+.register__item-span {
+    display: block;
+    width: 100%;
+    height: 66px;
+    background-image: url(../../images/li-1.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.item__inner {
+    margin-top: 64px;
+}
+.item__input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 18px;
+    padding: 22px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 111.111%;
+    color: #6f6c90;
+    border-radius: 33px;
+    border: 1px solid #eff0f6;
+    box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+}
+.item__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 145.833%;
+    color: #170f49;
+}
+.item__desc {
+    
+}
+.item__list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 44px;
+    @include list-unstyled;
+    margin-top: 40px;
+}
+.item__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.item__label {
+    display: block;
+    max-width: 284px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 111.111%;
+    color: #170f49;
+}
+.item__input-text {
+    background-image: url(../../images/name-icon.png);
+    background-repeat: no-repeat;
+    background-position: 92%;
+    background-size: 26px;
+    background-color: transparent;
+}
+.item__input-email {
+    background-image: url(../../images/email-li-icom.svg);
+    background-repeat: no-repeat;
+    background-position: 92%;
+}
+.item__input-tel {
+    background-image: url(../../images/phone-number-icon.png);
+    background-repeat: no-repeat;
+    background-position: 92%;
+}
+.item__input-company {
+    background-image: url(../../images/company-icon.png);
+    background-repeat: no-repeat;
+    background-position: 92%;
+    background-size: 15px 29px;
+}
+.item__btn {
+    display: block;
+    padding: 20px;
+    width: 165px;
+    margin-left: auto;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 111.111%;
+    text-align: center;
+    color:#fff;
+    border-radius: 56px;
+    box-shadow: 0px 3px 12px 0px rgba(74, 58, 255, 0.18);
+    background-color: #4a3aff;
+    border: none;
+}
+
+.js-contact-1-span,.js-contact-2-span,.js-contact-3-span,.js-contact-4-span {
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    display: none;
+    font-family: Inter;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: normal;
+    color: #ff0707;
+}
+.js-contact-2-span{
+    left: 315px;
+}
+.js-contact-3-span{
+    top: 108px;
+}
+.js-contact-4-span{
+    top: 108px;
+    left: 315px;
+}

@@ -1,0 +1,67 @@
+.js-bg-3 {
+    background-image: url(../../images/li-3.svg);
+}
+.project__input-wrapper {
+    padding: 45px 32px;
+}
+.project__input-wrapper span {
+    background-image: url(../../images/project-check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.project {
+    // display: none;
+}
+.project__input-one{
+    
+}
+.project__input-second{
+    
+}
+.project__input-three{
+    
+}
+.project__input-four{
+    
+}
+.project__span {
+    display: none!important;
+}
+.project__span-one {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.project__span-second {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.project__span-three {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.project__span-four {
+    display: block;
+    width: 25px;
+    height: 25px;
+}
+.project__label {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+}
+.project__label::before {
+    display: block;
+    width: 25px;
+    height: 25px;
+    content: "";
+    background-image: url(../../images/project-check.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.project__input:checked ~ .project__label::before {
+    background-image: url(../../images/project-checked.svg);
+}

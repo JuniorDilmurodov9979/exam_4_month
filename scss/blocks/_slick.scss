@@ -1,0 +1,55 @@
+.slick-next {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    top: 670px!important;
+    left: 512px!important;
+    width: 192px!important;
+    height: 60px!important;
+    border-radius: 66px;
+    background-color: #4a3aff!important;
+    box-shadow: 0px 3px 12px 0px rgba(74, 58, 255, 0.18);
+}
+
+.slick-next:before {
+    font-size: 18px;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    text-align: center;
+    line-height: 111.111%;
+    content: "Next step";
+    opacity: 1!important;
+}
+
+
+.slick-prev {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    top: 670px;
+    left: 0px;
+    width: 192px;
+    height: 60px;
+    border-radius: 66px;
+    border: 1px solid #4a3aff !important;
+    box-shadow: 0px 3px 12px 0px rgba(74, 58, 255, 0.18);
+}
+
+.slick-prev:before {
+    font-size: 18px;
+    font-family: 'DM Sans';
+    font-weight: 400;
+    text-align: center;
+    line-height: 111.111%;
+    color: #4a3aff;
+    content: "Previous step";
+    opacity: 1!important;
+}
+
+.register__item {
+    max-width: 700px;
+}
+.slick-prev.slick-disabled,.slick-next.slick-disabled {
+    cursor: auto;
+    opacity: 0;
+}

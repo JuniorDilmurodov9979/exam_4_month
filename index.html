@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- ani css  -->
+    <!-- <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css"> -->
+    
+    <!-- slick css  -->
+    <link rel="stylesheet" href="./slick/slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick/slick-theme.css">
+    
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Exam 4</title>
+</head>
+<body>
+    <!-- header started -->
+    
+    <header class="site-header pt-5">
+        <div class="container">
+            <div class="header__inner d-flex justify-content-between">
+                <a href="./index.html" class="logo__link">
+                    <img class="logo" src="./images/Logo.svg" alt="site Logo">
+                </a>
+                <button class="header__btn">Register</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- header finished -->
+    
+    <!-- main started -->
+    
+    <main class="site-main">
+        <section class="start">
+            <div class="container">
+                <div class="start__form-wrapper">
+                    <h1 class="start__title">
+                        Welcome
+                    </h1>
+                    <p class="start__desc">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam duis vitae curabitur amet, fermentum lorem. 
+                    </p>
+                    <form class="start__form js-form form">
+                        <div class="form__inner">
+                            <div class="form__name-wrapper">
+                                <input class="form__input js-name" name="user_name" type="text" placeholder="Your name">
+                                <span class="form__span-red first-name-span">First name</span>
+                                <span class="form__input-text js-danger-name">Length of the name should be 2 between 30 letters</span>
+                                <div class="form__input-last-name-wrapper">
+                                    <input class="form__input js-last-name" name="user_last_name" type="text" placeholder="Your last name">
+                                    <span class="form__span-red last-name-span">Last name</span>
+                                </div>
+                            </div>
+                            
+                            <input class="form__email js-email" type="email" name="user_email" placeholder="yourmail@gmail.com">
+                            <span class="form__span-red email-span">E-mail</span>
+                            <span class="js-email-error">The last letters of the email must end with @gmail.com and @mail.ru</span>
+                            
+                            <div class="form__password-wrapper">
+                                <input class="form__password js-password-value" type="password" name="user_password">
+                                <button class="form__password-btn js-password"></button>
+                            </div>
+                            <span class="form__span-red password-span">Password</span>
+                            <!-- <span class="js-password-error">
+                                It must be 8 letters
+                            </span> -->
+                            <span class="js-password-error-2">
+                                It must be letters and numbers, overall 8 characters
+                            </span>
+                            
+                            <div class="form__password-wrapper">
+                                <input class="form__repeat-password repeat-password-value" type="password" name="user_repeat_password">
+                                <button class="form__password-btn form__password-btnSecond js-password-repeat "></button>
+                            </div>
+                            <span class="form__span-red repeat-span">Repeat Password </span>
+                            <span class="js-repeat-error">
+                                Please retype correctly
+                            </span>
+                            
+                            <select class="form__select" name="user_select" required>
+                                <option value="" hidden>Select your gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                            <span class="form__span-blc gender-span">Gender *</span>
+                            
+                            <input class="form__date" type="date" name="user_date" required>
+                            <span class="form__span-blc date-span">Birthday *</span>
+                            <div class="form__radio-wrapper">
+                                <input type="checkbox" name="user_radio" required>
+                                <p class="form__radio-desc">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="#" class="form__radio-span">Gravida eget ultricies</a> pharetra scelerisque duis cursus.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <button class="form__btn js-btn">Enter</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section class="register">
+            <div class="container-register">
+                <div class="register__title-wrapper">
+                    <h2 class="register__title">
+                        Get a project quote
+                    </h2>
+                    <p class="register__desc">
+                        Please fill the form below to receive a quote for your project. Feel free to add as much detail as needed.
+                    </p>
+                </div>
+                <form class="register__form js-contact-form">
+                    <ul class="register__list js-list">
+                        
+                        <!-- li 1 started  -->
+                        <li class="register__item item js-item-1">
+                            <div class="item__wrapper">
+                                <span class="register__item-span js-bg-1"></span>
+                                <div class="item__inner">
+                                    <h3 class="item__title">
+                                        Contact details
+                                    </h3>
+                                    <p class="item__desc">Lorem ipsum dolor sit amet consectetur adipisc.
+                                    </p>
+                                    
+                                    <ul class="item__list">
+                                        <li class="item__item">
+                                            <label class="item__label js-contact-label-1">Name
+                                                <input class="item__input-text item__input js-contact-1" type="text" placeholder="John Carter">
+                                                <span class="js-contact-1-span">
+                                                    It must be between 2 and 30 letters
+                                                </span>
+                                            </label>
+                                            <label class="item__label js-contact-label-2">Email
+                                                <input class="item__input-email js-contact-2 item__input" type="email" placeholder="Email address">
+                                                <span class="js-contact-2-span">
+                                                    The last letters of the email must end with @gmail.com or @mail.ru
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="item__item">
+                                            <label class="item__label js-contact-label-3">Phone Number
+                                                <input class="item__input-tel item__input js-contact-3" type="tel" placeholder="(998) 777 -77-77">
+                                                <span class="js-contact-3-span">
+                                                    It must be start with +998 and please be careful to enter your number
+                                                </span>
+                                            </label>
+                                            <label class="item__label js-contact-label-4">Company
+                                                <input class="item__input-company item__input js-contact-4" type="text" placeholder="Company name">
+                                                <span class="js-contact-4-span">
+                                                    It must be between 3 and 20 letters
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- li 1 finished  -->
+                        
+                        <!-- li 2 started  -->
+                        <li class="register__item service">
+                            <div class="service__inner">
+                                <span class="register__item-span js-bg-2"></span>
+                                <div class="item__inner">
+                                    <h3 class="item__title">
+                                        Our services
+                                    </h3>
+                                    <p class="item__desc">Please select which service you are interested in.
+                                    </p>
+                                    
+                                    <ul class="item__list contact__list">
+                                        <li class="item__item contact__item">
+                                            <div class="contact__input-wrapper">
+                                                <input class="item__input-text item__input contact__item-dev js-input-contact" type="radio" name="choose" id="1">
+                                                <span class="contact__dev"></span>
+                                                <label class="contact__label" for="1">Development</label>
+                                            </div>
+                                            <div class="contact__input-wrapper">
+                                                <input class="item__input-email item__input contact__item-web js-input-contact" type="radio" name="choose" id="2">
+                                                <span class="contact__web"></span>
+                                                <label class="contact__label" for="2">Web Design</label>
+                                            </div>
+                                            
+                                        </li>
+                                        <li class="item__item contact__item">
+                                            <div class="contact__input-wrapper">
+                                                <input class="item__input-tel item__input contact__item-market js-input-contact" type="radio" name="choose" id="3">
+                                                <span class="contact__market"></span>
+                                                <label class="contact__label" for="3">Marketing</label>
+                                            </div>
+                                            <div class="contact__input-wrapper">
+                                                <input class="item__input-company item__input contact__item-other js-input-contact" type="radio" name="choose" id="4" required>
+                                                <span class="contact__other"></span>
+                                                <label class="contact__label" for="4">Other</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- li 3 started  -->
+                        
+                        <!-- project li started  -->
+                        <li class="register__item project">
+                            <div class="service__inner project__inner">
+                                <span class="register__item-span js-bg-3"></span>
+                                <div class="item__inner">
+                                    <h3 class="item__title">
+                                        What’s your project budget?
+                                    </h3>
+                                    <p class="item__desc">Please select the project budget range you have in mind.
+                                    </p>
+                                    
+                                    <ul class="item__list contact__list">
+                                        <li class="item__item contact__item">
+                                            <div class="contact__input-wrapper project__input-wrapper">
+                                                <input class="project__input-one project__input" type="radio" name="choose" id="5">
+                                                <span class="project__span-one project__span"></span>
+                                                <label class="contact__label project__label" for="5">$5.000 - $10.000</label>
+                                            </div>
+                                            <div class="contact__input-wrapper project__input-wrapper">
+                                                <input class="project__input-second project__input" type="radio" name="choose" id="6">
+                                                <span class="project__span-second project__span"></span>
+                                                <label class="contact__label project__label" for="6">$10.000 - $20.000</label>
+                                            </div>
+                                            
+                                        </li>
+                                        <li class="item__item contact__item">
+                                            <div class="contact__input-wrapper project__input-wrapper">
+                                                <input class="project__input-three project__input" type="radio" name="choose" id="7">
+                                                <span class="project__span-three project__span"></span>
+                                                <label class="contact__label project__label" for="7">$20.000 - $50.000</label>
+                                            </div>
+                                            <div class="contact__input-wrapper project__input-wrapper">
+                                                <input class="project__input-four project__input" type="radio" name="choose" id="8" required>
+                                                <span class="project__span-four project__span"></span>
+                                                <label class="contact__label project__label" for="8">$50.000 +</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- project li finished  -->
+                        
+                        <!-- complete last li  started-->
+                        <li class="register__item complete">
+                            <div class="service__inner complete__inner">
+                                <span class="register__item-span js-bg-4"></span>
+                                <div class="item__inner complete__item-inner">
+                                    <div class="complete__title-wrapper">
+                                        <h3 class="item__title">
+                                            Submit your quote request
+                                        </h3>
+                                        <p class="item__desc">Please review all the information you previously typed in the past steps, and if all is okay, submit your message to receive a project quote in 24 - 48 hours.
+                                        </p>
+                                    </div>
+                                    <button class="complete__btn js-submit" type="submit">Preview</button>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- complete last li  finished-->
+                        
+                    </ul>
+                    <div class="end">
+                        <div class="container-register">
+                            <h2 class="end__title">
+                                Project description
+                            </h2>
+                            <ul class="end__list">
+                                <li class="end__item">
+                                    <p class="end__desc">NAME:</p>
+                                    <span class="end__span end-span-1"></span> 
+                                </li>
+                                <li class="end__item">
+                                    <p class="end__desc">EMAIL:</p>
+                                    <span class="end__span end-span-2"></span>
+                                </li>
+                                <li class="end__item">
+                                    <p class="end__desc">CONTACT:</p>
+                                    <span class="end__span end-span-3"></span>
+                                </li>
+                                <li class="end__item">
+                                    <p class="end__desc">COMPANY:</p>
+                                    <span class="end__span end-span-4"></span>
+                                </li>
+                                <li class="end__item">
+                                    <p class="end__desc">SERVICE:</p>
+                                    <span class="end__span end-span-5"></span>
+                                </li>
+                                <li class="end__item">
+                                    <p class="end__desc">BUDGET: </p>
+                                    <span class="end__span end-span-6"></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </section>
+        
+        
+    </main>
+    
+    <!-- main finished -->
+    
+    <!-- footer started -->
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__logo-wrapper gap-3">
+                    <a href="./index.html" class="logo__link">
+                        <img class="logo" src="./images/Logo.svg" alt="site Logo">
+                    </a>
+                    <p class="footer___desc">
+                        Copyright © 2021 BRIX Templates | All Rights Reserved
+                    </p>
+                </div>
+                <form class="footer__form">
+                    <input class="footer__email" type="email" placeholder="Enter your email">
+                    <button class="footer__btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- footer finished -->
+    <!-- ani js  -->
+    <!-- <script src="./js/anijs-min.js"></script>
+        <script src="./js/main.js"></script>
+        <script src="./js/anijs-helper-dom-min.js"></script> -->
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        
+        <!-- slick js  -->
+        <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js">
+        </script>
+        <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js">
+        </script> -->
+        <script src="./js/slickonline1.js"></script>
+        <script src="./js/slickonline2.js"></script>
+        <script src="./slick/slick/slick.min.js"></script>
+        <script src="./js/slick.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+    </html>

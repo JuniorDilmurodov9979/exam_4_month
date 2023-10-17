@@ -1,0 +1,303 @@
+.start {
+    // display: none;
+}
+.start__form-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px;
+    border-radius: 20px;
+    border: 2px solid #dbdbdb;
+    background-color: #fff;
+    box-shadow: 0px 0px 0px 4px rgba(0, 0, 0, 0.05);
+}
+.start__title {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+}
+
+.start__desc {
+    margin-top: 0;
+    margin-bottom: 35px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+.form {
+    
+}
+.form__inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+.form__name-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form__input {
+    max-width: 178px;
+    width: 100%;
+}
+.form__input,.form__email {
+    display: block;
+    padding: 15px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    color: #6c727f;
+    border-radius: 8px;
+    border: 1px solid #d2d5da;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    
+    // width: 100%;
+    // height: 100%;
+}
+.form__email {
+    width: 100%;
+    background-image: url(../../images/email-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 97%;
+    // background-size: 18px 18px;
+}
+.form__password,.form__repeat-password,.form__select,.form__date {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    color: #6c727f;
+    border-radius: 8px;
+    border: 1px solid #d2d5da;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.05);
+    
+}
+.form__password,.form__repeat-password {
+    // background-image: url(../../images/password-icon.svg);
+    // background-repeat: no-repeat;
+    // background-position: 97%;
+}
+.form__repeat-password {
+    
+}
+.form__select {
+    appearance: none;
+    background-image: url(../../images/CaretDown.svg);
+    background-repeat: no-repeat;
+    background-position: 97%;
+}
+.form__date {
+    
+}
+.form__radio-wrapper {
+    display: flex;
+    column-gap: 12px;
+    align-items: start;
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.form__radio-wrapper input {
+    margin-top: 4px;
+}
+.form__radio-desc {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+}
+.form__radio-span {
+    display: inline-block;
+    font-weight: 600;
+    color: #000;
+}
+.form__btn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 28px; /* 100% */
+    text-align: center;
+    color: #fff;
+    border-radius: 8px;
+    background-color: #2c28e1;
+    border: none;
+}
+.form__span-blc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 5px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    color: #121826;
+    background-color: #fff;
+}
+.form__span-red {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: normal;
+    color: #121826;
+    background-color: #fff;
+    
+}
+.form__span-red::after {
+    display: block;
+    width: 7px;
+    height: 8px;
+    margin-left: 5px;
+    padding-right: 5px;
+    content: "";
+    background-image: url(../../images/red-dot.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+} 
+.last-name-span {
+    top: -15%;
+    left: 56%;
+}
+.first-name-span {
+    top: -6px;
+    left: 12px;
+}
+.email-span {
+    top: 67px;
+    left: 12px;
+}
+.password-span {
+    top: 141px;
+    left: 12px;
+}
+.repeat-span {
+    top: 215px;
+    left: 12px;
+}
+.gender-span {
+    top: 288px;
+    left: 15px;
+}
+.date-span {
+    top: 365px;
+    left: 12px;
+}
+.form__password-btn {
+    position: absolute;
+    top: 32%;
+    left: 92%;
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-image: url(../../images/password-icon.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+}
+.form__password-btnSecond {
+    top: 32%;
+    left: 92%;
+    background-repeat: no-repeat;
+}
+.form__input-text, .js-email-error,.js-password-error,.js-password-error-2,.js-repeat-error {
+    position: absolute;
+    top: 51px;
+    left: 5px;
+    display: none;
+    font-family: Inter;
+    font-size: 8px;
+    font-weight: 700;
+    line-height: normal;
+    color: #ff0707;
+}
+.js-email-error {
+    top: 125px;
+}
+.js-password-error,.js-password-error-2  {
+    top: 200px;
+}
+.js-repeat-error {
+    top: 272px;
+}
+
+.form__password-wrapper {
+    position: relative;
+}
+.form__input-last-name-wrapper {
+
+}
+@include desktop-first(650px) {
+    .start__form-wrapper {
+        padding: 25px;
+        padding-top: 40px;
+    }
+    .start__title {
+        font-size: 24px;
+    }
+    .start__desc,.form__radio-desc,.form__select {
+        font-size: 13px;
+    }
+    .form__inner input {
+        font-size: 13px;
+    }
+    .form__name-wrapper {
+        // column-gap: 10px;
+    }
+    .last-name-span {
+        top: -13%;
+        left: 63%;
+    }
+}
+@include desktop-first(460px) {
+    .form__password-btn {
+        left: 91%;
+    }
+    .form__password-btnSecond {
+        left: 91%;
+    }
+    .last-name-span {
+        top: -13%;
+        left: 55%;
+    }
+}
+@include desktop-first(425px) {
+    .form__password-btn {
+        left: 90%;
+    }
+    .form__password-btnSecond {
+        left: 90%;
+    }
+    .last-name-span {
+        top: -13%;
+        left: 58%;
+    }
+}
