@@ -114,74 +114,78 @@ elForm.addEventListener('submit', function(evt) {
     
     if(nameValue.length < 2 || nameValue.length > 30) {
         elSpanDanger.style.display = 'block';
+        elInputName.classList.add('placeH');
         // elInputName.style.color = '#ff0707';
+        elInputName.classList.add('error-input');
         elInputName.style.borderColor = '#ff0707';
         elInputName.style.outlineColor = '#ff0707';
         elFirstNameSpan.style.color = '#ff0707';
-        elInputName.classList.add('placeH');
         return;
     }
     else if(!isNaN(nameValue)) {
         elSpanDanger.style.display = 'block';
+        elInputName.classList.add('placeH');
         // elInputName.style.color = '#ff0707';
+        elInputName.classList.add('error-input');
         elInputName.style.outlineColor = '#ff0707';
         elInputName.style.borderColor = '#ff0707';
+        elInputName.classList.add('error-input');
         elFirstNameSpan.style.color = '#ff0707';
-        elInputName.classList.add('placeH');
         return;
     }
     else if(nameValue.match(number)) {
         elSpanDanger.style.display = 'block';
         elFirstNameSpan.style.color = '#ff0707';
-        elInputName.style.outlineColor = '#ff0707';
         elInputName.style.borderColor = '#ff0707';
         elInputName.classList.add('placeH');
         elInputName.classList.add('error-input');
+        elInputName.style.outlineColor = '#ff0707';
         return;
     }
     else {
         elSpanDanger.style.display = 'none';
-        elFirstNameSpan.style.color = '';
+        elFirstNameSpan.style.color = '#121826';
         elInputName.classList.remove('placeH');
-        elInputName.style.outlineColor = '';
         elInputName.classList.remove('error-input');
-        elInputName.style.borderColor = '';
+        elInputName.style.borderColor = '#d2d5da';
+        elInputName.style.outlineColor = '#6c727f';
         
     }
     
     
     // last name validation
     
-    if(lastNameValue.length < 2 || nameValue.length > 30) {
+    if(lastNameValue.length < 2 || lastNameValue.length > 30) {
         elSpanDanger.style.display = 'block';
-        elInputName.style.outlineColor = '#ff0707';
+        elLastNameSpan.style.color = '#ff0707';
         elInputLastName.classList.add('placeH');
         elInputLastName.classList.add('error-input');
+        elInputName.style.outlineColor = '#ff0707';
         return;
     }
     else if(!isNaN(lastNameValue)) {
         elSpanDanger.style.display = 'block';
         elLastNameSpan.style.color = '#ff0707';
-        elInputLastName.style.outlineColor = '#ff0707';
         elInputLastName.classList.add('error-input');
         elInputLastName.classList.add('placeH');
+        elInputLastName.style.outlineColor = '#ff0707';
         return;
     }
     else if(lastNameValue.match(number)) {
         elSpanDanger.style.display = 'block';
         elLastNameSpan.style.color = '#ff0707';
-        elInputLastName.style.outlineColor = '#ff0707';
-
+        
         elInputLastName.classList.add('placeH');
         elInputLastName.classList.add('error-input');
+        elInputLastName.style.outlineColor = '#ff0707';
         return;
     }
     else {
         elSpanDanger.style.display = 'none';    
         elLastNameSpan.style.color = '#121826';
-        elInputLastName.style.outlineColor = '';
         elInputLastName.classList.remove('placeH');
         elInputLastName.classList.remove('error-input');
+        elInputLastName.style.outlineColor = '#6c727f'; 
         
     }
     
@@ -193,19 +197,19 @@ elForm.addEventListener('submit', function(evt) {
         elInputEmail.style.color = '#ff0707';
         elInputEmail.style.outlineColor = '#ff0707';
         elInputEmail.classList.add('placeH');
-        elEmailTitle.style.color = '#ff0707';
         elInputEmail.classList.add('error-input');
+        elEmailTitle.style.color = '#ff0707';
         elInputEmail.style.backgroundImage = 'url(../images/email-error-icon.svg)';
         return;
     }
     else {
         elEmailSpan.style.display = 'none';    
-        elInputEmail.style.color = '#6C727F';
-        elInputEmail.style.outlineColor = '';
-        elInputEmail.style.borderColor = '#d2d5da';
         elInputEmail.classList.remove('placeH');
-        elEmailTitle.style.color = '#121826';
         elInputEmail.classList.remove('error-input');
+        elInputEmail.style.color = '#6C727F';
+        elInputEmail.style.outlineColor = '#6c727f';
+        elInputEmail.style.borderColor = '#d2d5da';
+        elEmailTitle.style.color = '#121826';
         elInputEmail.style.backgroundImage = 'url(../images/email-icon.svg)';
     }
     
@@ -225,7 +229,7 @@ elForm.addEventListener('submit', function(evt) {
         elPassword.classList.remove('placeH');
         elPassword.classList.remove('error-input');
         elPasswordBtn.style.backgroundImage = 'url(../images/password-icon.svg)';
-        elPassword.style.outlineColor = ''
+        elPassword.style.outlineColor = '#6c727f'
     }
     
     // repeat password 
@@ -241,11 +245,13 @@ elForm.addEventListener('submit', function(evt) {
     else {
         elRepeatError.style.display = 'none';
         elRepeatPassword.style.color = '#6C727F';
-        elRepeatPassword.style.borderColor = '';
-        elRepeatPassword.style.outlineColor = '';
+        elRepeatPassword.style.borderColor = '#d2d5da';
         elRepeatTitle.style.color = '#121826';
         elRepeatPasswordBtn.style.backgroundImage = 'url(../images/password-icon.svg)';
         elRepeatPassword.classList.remove('placeH');
+        elRepeatPassword.style.outlineColor = '#6c727f';
+
+
         elFormWrapper.style.display = 'none';
         elRegister.style.display = 'block';
         elList.style.display = 'block';
@@ -345,10 +351,10 @@ elFormContact.addEventListener('submit', function(evtContact) {
     }
     else {
         elFormItemOneSpanThree.style.display = 'none';    
-        elFormItemOneInputThree.style.outlineColor = '';
         elFormItemOneInputThree.style.backgroundImage = '';
         elFormItemOneInputThree.classList.remove('error-input');
         elFormItemOneInputThree.classList.remove('placeH');
+        elFormItemOneInputThree.style.outlineColor = '#6c727f';
         
     }
     
@@ -375,7 +381,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputFour.style.color = '#6C727F';
         elFormItemOneInputFour.style.borderColor = '#d2d5da';
         elFormItemOneLabelFour.style.color = '#121826';
-        elFormItemOneInputFour.style.outlineColor = '';
+        elFormItemOneInputFour.style.outlineColor = '#6c727f';
         elFormItemOneInputFour.style.backgroundImage = '';
         elFormItemOneInputFour.classList.remove('placeH');
         elFormItemOneInputFour.classList.remove('error-input');
