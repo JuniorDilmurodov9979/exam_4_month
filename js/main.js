@@ -116,7 +116,7 @@ elForm.addEventListener('submit', function(evt) {
         elSpanDanger.style.display = 'block';
         // elInputName.style.color = '#ff0707';
         elInputName.style.borderColor = '#ff0707';
-        // elInputName.style.outlineColor = '#ff0707';
+        elInputName.style.outlineColor = '#ff0707';
         elFirstNameSpan.style.color = '#ff0707';
         elInputName.classList.add('placeH');
         return;
@@ -124,7 +124,7 @@ elForm.addEventListener('submit', function(evt) {
     else if(!isNaN(nameValue)) {
         elSpanDanger.style.display = 'block';
         // elInputName.style.color = '#ff0707';
-        // elInputName.style.outlineColor = '#ff0707';
+        elInputName.style.outlineColor = '#ff0707';
         elInputName.style.borderColor = '#ff0707';
         elFirstNameSpan.style.color = '#ff0707';
         elInputName.classList.add('placeH');
@@ -133,6 +133,7 @@ elForm.addEventListener('submit', function(evt) {
     else if(nameValue.match(number)) {
         elSpanDanger.style.display = 'block';
         elFirstNameSpan.style.color = '#ff0707';
+        elInputName.style.outlineColor = '#ff0707';
         elInputName.style.borderColor = '#ff0707';
         elInputName.classList.add('placeH');
         elInputName.classList.add('error-input');
@@ -142,6 +143,7 @@ elForm.addEventListener('submit', function(evt) {
         elSpanDanger.style.display = 'none';
         elFirstNameSpan.style.color = '';
         elInputName.classList.remove('placeH');
+        elInputName.style.outlineColor = '';
         elInputName.classList.remove('error-input');
         elInputName.style.borderColor = '';
         
@@ -152,7 +154,7 @@ elForm.addEventListener('submit', function(evt) {
     
     if(lastNameValue.length < 2 || nameValue.length > 30) {
         elSpanDanger.style.display = 'block';
-        elLastNameSpan.style.color = '#ff0707';
+        elInputName.style.outlineColor = '#ff0707';
         elInputLastName.classList.add('placeH');
         elInputLastName.classList.add('error-input');
         return;
@@ -160,6 +162,7 @@ elForm.addEventListener('submit', function(evt) {
     else if(!isNaN(lastNameValue)) {
         elSpanDanger.style.display = 'block';
         elLastNameSpan.style.color = '#ff0707';
+        elInputLastName.style.outlineColor = '#ff0707';
         elInputLastName.classList.add('error-input');
         elInputLastName.classList.add('placeH');
         return;
@@ -167,6 +170,8 @@ elForm.addEventListener('submit', function(evt) {
     else if(lastNameValue.match(number)) {
         elSpanDanger.style.display = 'block';
         elLastNameSpan.style.color = '#ff0707';
+        elInputLastName.style.outlineColor = '#ff0707';
+
         elInputLastName.classList.add('placeH');
         elInputLastName.classList.add('error-input');
         return;
@@ -174,6 +179,7 @@ elForm.addEventListener('submit', function(evt) {
     else {
         elSpanDanger.style.display = 'none';    
         elLastNameSpan.style.color = '#121826';
+        elInputLastName.style.outlineColor = '';
         elInputLastName.classList.remove('placeH');
         elInputLastName.classList.remove('error-input');
         
@@ -185,6 +191,7 @@ elForm.addEventListener('submit', function(evt) {
         elEmailSpan.style.display = 'block';
         elInputEmail.style.borderColor = '#ff0707';
         elInputEmail.style.color = '#ff0707';
+        elInputEmail.style.outlineColor = '#ff0707';
         elInputEmail.classList.add('placeH');
         elEmailTitle.style.color = '#ff0707';
         elInputEmail.classList.add('error-input');
@@ -194,6 +201,7 @@ elForm.addEventListener('submit', function(evt) {
     else {
         elEmailSpan.style.display = 'none';    
         elInputEmail.style.color = '#6C727F';
+        elInputEmail.style.outlineColor = '';
         elInputEmail.style.borderColor = '#d2d5da';
         elInputEmail.classList.remove('placeH');
         elEmailTitle.style.color = '#121826';
@@ -205,23 +213,26 @@ elForm.addEventListener('submit', function(evt) {
     
     if(passwordValue.length !== 8 || !isNaN(passwordValue)){
         elPasswordErrorSecond.style.display = 'block';
-        elPassword.classList.add('placeH');
         elPasswordTitle.style.color = '#ff0707';  
         elPassword.classList.add('error-input');
+        elPassword.classList.add('placeH');
+        elPassword.style.outlineColor = '#ff0707'
         return;
     } 
     else {
         elPasswordErrorSecond.style.display = 'none';
-        elPassword.classList.remove('placeH');
         elPasswordTitle.style.color = '#121826';
+        elPassword.classList.remove('placeH');
         elPassword.classList.remove('error-input');
         elPasswordBtn.style.backgroundImage = 'url(../images/password-icon.svg)';
+        elPassword.style.outlineColor = ''
     }
     
     // repeat password 
     if(repeatValue !== passwordValue){
         elRepeatError.style.display = 'block';
         elRepeatPassword.style.color = '#ff0707';
+        elRepeatPassword.style.outlineColor = '#ff0707';
         elRepeatPassword.style.borderColor = '#ff0707';
         elRepeatTitle.style.color = '#ff0707';  
         elRepeatPassword.classList.add('placeH');
@@ -231,6 +242,7 @@ elForm.addEventListener('submit', function(evt) {
         elRepeatError.style.display = 'none';
         elRepeatPassword.style.color = '#6C727F';
         elRepeatPassword.style.borderColor = '';
+        elRepeatPassword.style.outlineColor = '';
         elRepeatTitle.style.color = '#121826';
         elRepeatPasswordBtn.style.backgroundImage = 'url(../images/password-icon.svg)';
         elRepeatPassword.classList.remove('placeH');
