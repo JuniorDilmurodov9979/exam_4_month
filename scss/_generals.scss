@@ -57,18 +57,18 @@ img {
     background-image: url(../images/eye-close.png);
 }
 .start__form-wrapper {
-    display: flex !important;
+    display: flex ;
     
 }
 
 .start {
-    display: none;
+    // display: none;
 }
 // .register {
 //     display: none !important;
 // }
 .register {
-    // display: none;
+    display: none;
 }
 .register__form {
     // display: none;

@@ -30,7 +30,7 @@ let elRegisterForm = document.querySelector('.register__form');
 let elRegister = document.querySelector('.register');
 const number = /[0-9]/;
 const letters = /[a-z]/;
-
+let titleWrapper = document.querySelector('.register__title-wrapper');
 let toggled = false;
 
 
@@ -58,7 +58,7 @@ let elFormItemOneSpanFour = document.querySelector('.js-contact-4-span');
 
 // services item 2 
 let elServiceInput = document.querySelector('.js-input-contact');
-let elProjectInput = document.querySelector('.project-input');
+let elProjectInput = document.querySelector('.project__input');
 let elProjectSpan = document.querySelector('.project__span');
 
 let elEndSpanOne = document.querySelector('.end-span-1');
@@ -68,16 +68,17 @@ let elEndSpanFour = document.querySelector('.end-span-4');
 let elEndSpanFive = document.querySelector('.end-span-5');
 let elEndSpanSix = document.querySelector('.end-span-6');
 
-
 let elEnd = document.querySelector('.end');
 
+let selectedOne;
+let selectedTwo;
 // ---------------------------------- form 1 -------------------------------
 elForm.addEventListener('submit', function(evt) {
     evt.preventDefault();
     
     // toggle manual for password btn
-    elPasswordBtn.addEventListener('click',function(evt) {
-        evt.preventDefault();
+    elPasswordBtn.addEventListener('click',function(evtw) {
+        evtw.preventDefault();
         if(toggled) {
             document.body.classList.add("change-bg1");  
             elPassword.type = 'text';
@@ -89,8 +90,8 @@ elForm.addEventListener('submit', function(evt) {
         toggled = !toggled;
         // return;
     });
-    elRepeatPasswordBtn.addEventListener('click',function(evt) {
-        evt.preventDefault();
+    elRepeatPasswordBtn.addEventListener('click',function(evtw) {
+        evtw.preventDefault();
         let toggled = false;
         if(toggled) {
             document.body.classList.add("change-bg2");  
@@ -229,13 +230,13 @@ elForm.addEventListener('submit', function(evt) {
     else {
         elRepeatError.style.display = 'none';
         elRepeatPassword.style.color = '#6C727F';
-        elRepeatPassword.style.borderColor = '#d2d5da';
+        elRepeatPassword.style.borderColor = '';
         elRepeatTitle.style.color = '#121826';
         elRepeatPasswordBtn.style.backgroundImage = 'url(../images/password-icon.svg)';
         elRepeatPassword.classList.remove('placeH');
-        elStart.style.display = 'none';
+        elFormWrapper.style.display = 'none';
         elRegister.style.display = 'block';
-        elRegisterForm.style.display = 'block';
+        elList.style.display = 'block';
     }
     // final stage 
 })
@@ -253,8 +254,8 @@ elFormContact.addEventListener('submit', function(evtContact) {
     const emailContactValue = elFormItemOneInputSecond.value.trim();
     const telContactValue = elFormItemOneInputThree.value.trim();
     const companyContactValue = elFormItemOneInputFour.value.trim();
-    
-    const serviceInputValue = elServiceInput.value.trim();    
+    var serviceInputValue = elServiceInput.value.trim();    
+    var projectInputValue = elProjectInput.value;
     
     
     // name validation
@@ -264,6 +265,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputOne.style.backgroundImage = 'url(../images/name-icon-error.png)';
         elFormItemOneInputOne.classList.add('placeH');
         elFormItemOneInputOne.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else if(nameContactValue.match(number)) {
@@ -272,6 +274,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputOne.style.backgroundImage = 'url(../images/name-icon-error.png)';
         elFormItemOneInputOne.classList.add('placeH');
         elFormItemOneInputOne.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else {
@@ -289,6 +292,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputSecond.style.backgroundImage = 'url(../images/email-error-icon.svg)';
         elFormItemOneInputSecond.classList.add('placeH');
         elFormItemOneInputSecond.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else {
@@ -306,6 +310,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputThree.style.backgroundImage = 'url(../images/phone-number-icon-error.png)';
         elFormItemOneInputThree.classList.add('placeH');
         elFormItemOneInputThree.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else if(isNaN(telContactValue)) {
@@ -314,6 +319,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputThree.style.backgroundImage = 'url(../images/phone-number-icon-error.png)';
         elFormItemOneInputThree.classList.add('placeH');
         elFormItemOneInputThree.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else if(telContactValue.match(letters)) {
@@ -322,6 +328,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputThree.style.backgroundImage = 'url(../images/phone-number-icon-error.png)';
         elFormItemOneInputThree.classList.add('placeH');
         elFormItemOneInputThree.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else {
@@ -340,6 +347,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputFour.style.backgroundImage = 'url(../images/company-icon-error.png)';
         elFormItemOneInputFour.classList.add('placeH');
         elFormItemOneInputFour.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else if(companyContactValue.match(number)) {
@@ -347,6 +355,7 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneLabelFour.style.color = '#ff0707';
         elFormItemOneInputFour.classList.add('placeH');
         elFormItemOneInputFour.classList.add('error-input');
+        alert('You missed something, please check in');
         return;
     }
     else {
@@ -360,13 +369,35 @@ elFormContact.addEventListener('submit', function(evtContact) {
         elFormItemOneInputFour.classList.remove('error-input');
     }
     
-    elEndSpanOne.textContent = telContactValue;
-    elEndSpanTwo.textContent = companyContactValue;
-    elEndSpanThree.textContent = companyContactValue;
+    // service li
+    
+    const serviceName = document.getElementsByName('choose');
+    const projectName = document.getElementsByName('money');
+    for(let radioOne of serviceName) {
+        if(radioOne.checked) {
+            elEndSpanFive.textContent = radioOne.value;
+            break;
+        }
+    }
+    // budget li
+    for(let radioS of projectName) {
+        if(radioS.checked) {
+            elEndSpanSix.textContent = radioS.value;
+            break;
+        }
+    }
+    
+    
+    elEndSpanOne.textContent = nameContactValue;
+    elEndSpanTwo.textContent = emailContactValue;
+    elEndSpanThree.textContent = telContactValue;
     elEndSpanFour.textContent = companyContactValue;
+    
     // project li
     elList.style.display = 'none';
+    titleWrapper.style.display = 'none'
     elEnd.style.display = 'block';
+    
     // add things 
     
 })
